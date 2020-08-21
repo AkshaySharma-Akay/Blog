@@ -1,0 +1,8 @@
+<header id="header">
+    <div>Akshay</div>
+    <div>
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="header-nav-current" {% endif %}>{{ item.name }}</a>
+        {% endfor %}
+    </div>
+</header>

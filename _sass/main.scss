@@ -1,0 +1,121 @@
+@import "variables";
+
+body{
+    font-family:$font-text;
+    font-size:$font-size-text;
+    background-color:$bg-color;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-heading;
+}
+// header style
+
+#header{ 
+    display: flex;
+    font-family: $font-heading;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 70px;
+    background-color: $header-bg-color;
+}
+#header a{
+    display: inline-block;
+    padding:15px 10px;
+    color:$font-color-lite;
+    text-decoration:none;
+}
+#header .header-nav-current{
+    color:#000;
+}
+
+@media all and (max-width:$breakpoint-tablet){
+    #header{
+        padding:0px 20px;
+    }
+}
+
+// content 
+#content-outer-wrapper{
+    min-height: calc(100vh - #{$height-header} - #{$height-footer});
+}
+#content-wrapper{
+    padding:20px 0px;
+}
+// footer style
+
+#footer{
+    box-shadow: 0 -3px 35px -25px $font-color;
+    background-color:$primary-color;
+    padding:15px;
+}
+#footer p{
+    text-align: center;
+}
+#footer a{
+    color:$font-color-lite;
+    transition:all 0.5s ease-in;
+}
+#footer a:hover{
+    color:$font-color;
+}
+// post styles
+
+#page{
+    padding:50px 70px;
+}
+#posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post{
+    transition:all 0.5s ease-in;
+    text-decoration:none;
+    border:1px solid $primary-color;
+    background-color: $primary-color;
+    border-radius:$border-radius-all;
+    box-shadow: 0px 0px 23px -21px $font-color;
+    display: flex;
+    align-items: center;
+    padding:20px;
+    margin:10px 0px;
+    width:calc(33% - 40px);
+}
+.post:hover{
+    border:1px solid $font-color-lite;
+}
+.post img{
+    width:$post-img-width;
+    height:$post-img-height;
+}
+.post-txt h2{
+    text-decoration:none;
+    padding:10px 0px;
+    color:$font-color;
+    font-family: $font-heading;
+    font-size:$font-size-heading;
+}
+.post-txt p{
+    color:$font-color-lite;
+    font-family: $font-text;
+    font-size:$font-size-text;
+}
+@media all and (max-width:968px){
+    .post{
+        width:calc(50% - 40px - 10px);
+    }
+}
+@media all and (max-width:$breakpoint-tablet){
+    #page{
+        padding:0px 20px; 
+    }
+    #post{
+        flex-direction: row;
+    }
+    .post{
+        display: block;
+        text-align: center;
+        width:auto;
+    }
+}

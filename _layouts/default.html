@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- google font here -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+  <!-- page header -->
+  {% include header.html %}
+
+  <!-- content -->
+  <div id="content-outer-wrapper">
+    <div id="content-wrapper">
+      {{ content }}
+    </div>
+  </div>
+
+  <!-- the footer seciton -->
+  {% include footer.html %}
+</body>
+
+</html>

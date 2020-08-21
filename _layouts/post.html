@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- google font here -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/poststyles.css">
+</head>
+
+<body>
+    <!-- page header -->
+    {% include header.html %}
+
+    <!-- content -->
+    <div id="content-outer-wrapper">
+        <div id="content-wrapper">
+            <div id="sig-post">
+                <h1 id='sig-post-heading'>{{ page.title }}</h1>
+                <div id="sig-post-img">
+                    <img src="{{ page.postimage }}" alt="{{page.postimagealt}}" />
+                </div>
+                <p id="sig-post-info">{{ page.date | date_to_string }} - {{ page.author }}</p>
+                <p id="sig-post-content">
+                    {{ content }}
+                </p>
+            </div>
+            <div id="sidebar">
+                <h3>About Me</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dignissimos fugit mollitia commodi,
+                    quos minus culpa? Explicabo vitae voluptatibus excepturi ducimus magnam distinctio itaque quidem
+                    est? Ex mollitia tempore tempora.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- the footer seciton -->
+    {% include footer.html %}
+</body>
+
+</html>
